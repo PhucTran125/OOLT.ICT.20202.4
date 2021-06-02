@@ -16,7 +16,7 @@ public class DemonstrationScreenController {
 	private VirusStorage theOther;
 	private Scene scene;
 	private Stage stage;
-	//-----------FXML-------------------------//
+	//-----------FXML-------------//
 	
 	@FXML
 	private Button home;
