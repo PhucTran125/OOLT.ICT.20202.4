@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField alignment="CENTER" editable="false" text="THE AIM OF APPLICATION" />
+            <TextArea fx:id="textArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="392.0" prefWidth="500.0" text="&quot;The world of virus&quot; is the application in which the user can get details about a virus by watching their structure, the progress of virus infecting the host cell and the user can get the minor difference of two viruses.&#10;Here is all function of the app:&#10;1. With envelop: The user can choose a virus in list of virus with envelop to investigate.&#10;2. Without envelop: The user can choose a virus in list of virus without envelop to investigate.&#10;3. In Choosing Screen: The user can filter the virus by name. by transmission and choose a virus to investigate.&#10;4. In Demonstration Screen:&#10;4.1 Structure Tab: show structure of virus and the component's description.&#10;4.2 Infection Tab: show the  progress of virus infecting the host cell and the specific characteristics of each stage.&#10;5. Help: The usage of the application (You are here)&#10;6. Quit" wrapText="true" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
