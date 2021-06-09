@@ -41,4 +41,4 @@
 		+ Investigating virus - infection progress
 	- Evaluaion : Completing on time
 
-*Video: https://drive.google.com/drive/folders/1-4g5sA2CGzQ6eDRDLr9BThksTktEsKRP?fbclid=IwAR31-JM3bCTlHFZJgMMlx3MB8OSeUEQB27uUabUIljswW7Kewb6L5kq4iEY
+*Video demo + presentation: https://bit.ly/3w9coBR
