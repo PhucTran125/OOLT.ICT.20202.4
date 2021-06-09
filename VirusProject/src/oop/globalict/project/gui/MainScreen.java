@@ -54,7 +54,7 @@ public class MainScreen extends JFrame {
 		WithoutEnvelop.setNbNotEnVirus(0);
 		//------------------------------------------Corona-----------------------------------
 		WithEnvelop vr1 = new WithEnvelop("Corona", "/oop/globalict/project/image/corona/corona-Structure.png", "Capsid (Nucleocapsid): protein coat, protect RNA", "RNA (RNA ciral genome): ribonucleic acid, stores genetic data in organization", "Body fluids, mother to child ",
-				"- Viral envelope: Comprise glycoproteins\n- Glycoproteins(Spike glycoprotein): help the virus identify and bind to its target\n- Membrane: binding proteins of Corona virus\r\n");
+				"Viral envelope: Comprise glycoproteins", "- Glycoproteins(Spike glycoprotein): help the virus identify and bind to its target\n- Membrane: binding proteins of Corona virus\r\n");
 		Stage vr1Stage1 = new Stage("/oop/globalict/project/image/corona/corona-stage1.png","Approach the cell:\nWhen Corona virus enter the cell system, Glycoproteins binds to cell surface, then fusion progress occurs with fusion proteins in cell");
 		Stage vr1Stage2 = new Stage("/oop/globalict/project/image/corona/corona-stage2.png", "Enter the cell:\nThe Corona virus enters in the cell\n");
 		Stage vr1Stage3 = new Stage("/oop/globalict/project/image/corona/corona-stage3.png", "Resolve components: \nCorona virus controls core of the cell and be resolved to viral proteins and RNA");
@@ -66,8 +66,8 @@ public class MainScreen extends JFrame {
 		vr1.addStage(vr1Stage4);
 		
 		//----------------------------------------HIV---------------------------------------------
-		WithEnvelop vr2 = new WithEnvelop("HIV", "/oop/globalict/project/image/HIV/HIV-Structure.png", "Capsid (Nucleocapsid): protein coat, protect RNA", "RNA (RNA ciral genome): ribonucleic acid, stores genetic data in organization\n - Reverse transcriptase: uses to infect it’s host and replicate", "Body fluids, air",
-										  "- Viral envelope: comprise glycoproteins \n- Glycoproteins: help the virus identify and bind to its target\r\n");
+		WithEnvelop vr2 = new WithEnvelop("HIV", "/oop/globalict/project/image/HIV/HIV-Structure.png", "Capsid (Nucleocapsid): protein coat, protect RNA", "RNA (RNA ciral genome): ribonucleic acid, stores genetic data in organization\n", "Body fluids, air",
+				"Viral envelope: comprise glycoproteins", "- Glycoproteins: help the virus identify and bind to its target\r\n- Reverse transcriptase: uses to infect it’s host and replicate\r\n");
 		Stage vr2Stage1 = new Stage("/oop/globalict/project/image/HIV/HIV-stage1.png","Approach the cell:\nWhen HIV virus enter the cell system, Glycoproteins binds to cell surface\r\n");
 		Stage vr2Stage2 = new Stage("/oop/globalict/project/image/HIV/HIV-stage2.png", "Enter the cell:\nThe HIV virus enters in the cell\n");
 		Stage vr2Stage3 = new Stage("/oop/globalict/project/image/HIV/HIV-stage3.png", "Duplication:\nNew HIV viruses, temporarily called type A, which is the same component\n with HIV virus, are released from the cell");
@@ -80,7 +80,7 @@ public class MainScreen extends JFrame {
 				
 		//-----------------------------------------Ebola---------------------
 		WithEnvelop vr3 = new WithEnvelop("Ebola", "/oop/globalict/project/image/ebola/ebola-Structure.png", "Capsid (Nucleoprotein): protein coat, protect RNA", "- RNA (RNA genome): ribonucleic acid, stores genetic data in organization", "Body fluids, animals",
-				"- Viral envelope: comprise glycoproteins\n- Glycoproteins: help the virus identify and bind to its target");
+				"Viral envelope: comprise glycoproteins", "- Glycoproteins: help the virus identify and bind to its target\n- VP40, VP24: proteins enable virus reproduction");
 		Stage vr3Stage1 = new Stage("/oop/globalict/project/image/ebola/ebola-stage1.png", "Approach the cell:\nWhen Ebola virus enter the cell system, Glycoproteins binds to cell surface");
 		Stage vr3Stage2 = new Stage("/oop/globalict/project/image/ebola/ebola-stage2.png", "Enter the cell:\nThe Ebola virus enters in the cell");
 		Stage vr3Stage3 = new Stage("/oop/globalict/project/image/ebola/ebola-stage3.png", "Duplication:\nNew ebola viruses, temporarily called type A, which is the same component with ebola virus, are released from the cell");
@@ -93,9 +93,9 @@ public class MainScreen extends JFrame {
 		vr3.addStage(vr3Stage4);
 				
 		//------------------------------------------Rhino----------------------
-		WithoutEnvelop vr4 = new WithoutEnvelop("Rhino", "/oop/globalict/project/image/rhino/rhino-Structure.png", "Acid nucleic (RNA or DNA): genetic material, stores genetic data in organization", "Capsid (Protein casing): protein coat, protect acid nucleic", "Air, body fluids");
+		WithoutEnvelop vr4 = new WithoutEnvelop("Rhino", "/oop/globalict/project/image/rhino/rhino-Structure.png", "Acid nucleic (RNA or DNA): genetic material, stores genetic data in organization", "Capsid (Protein casing): protein coat, protect acid nucleic", "Air, body fluids", "none");
 		Stage vr4Stage1 = new Stage("/oop/globalict/project/image/rhino/rhino-stage1.png", "Attachment:\nRhinovirus particles attach to host cells by binding to specific host cell.");
-		Stage vr4Stage2 = new Stage("/oop/globalict/project/image/rhino/rhino-stage2.png", "injection:\nThe rhinovirus RNA is injected directly into the host cell");
+		Stage vr4Stage2 = new Stage("/oop/globalict/project/image/rhino/rhino-stage2.png", "Injection:\nThe rhinovirus RNA is injected directly into the host cell");
 		Stage vr4Stage3 = new Stage("/oop/globalict/project/image/rhino/rhino-stage3.png", "Duplication:\nOut of the host cell, many rhinovirus particles are made, as many as 100000 virions per cell");
 		
 		vr4.addStage(vr4Stage1);
@@ -103,7 +103,7 @@ public class MainScreen extends JFrame {
 		vr4.addStage(vr4Stage3);
 				
 		//------------------------------------------Polio----------------------
-		WithoutEnvelop vr5 = new WithoutEnvelop("Polio", "/oop/globalict/project/image/poliovirus/polio-Structure.png", "Acid nucleic (RNA or DNA): genetic material, stores genetic data in organization\n*Vpg: encoded protein, be linked to RNA", "Capsid (Protein casing):  Protein coat, protect acid nucleic","air, mouth");
+		WithoutEnvelop vr5 = new WithoutEnvelop("Polio", "/oop/globalict/project/image/poliovirus/polio-Structure.png", "Acid nucleic (RNA or DNA): genetic material, stores genetic data in organization\n*Vpg: encoded protein, be linked to RNA", "Capsid (Protein casing):  Protein coat, protect acid nucleic","air, mouth", "none");
 		Stage vr5Stage1 = new Stage("/oop/globalict/project/image/poliovirus/polio-stage1.png", "Atachment:\nIf the virus finds a cell with the correct receptor, infection begins");
 		Stage vr5Stage2 = new Stage("/oop/globalict/project/image/poliovirus/polio-stage2.png", "Injection:\nThe poliovirus genome (RNA) enters the cell");
 		Stage vr5Stage3 = new Stage("/oop/globalict/project/image/poliovirus/polio-stage3.png", "Duplication:\nNew RNA and new capsids (shells) create new poliovirus. Thousands of new poliovirus brust out of the cell and into the bloodstream");
@@ -112,6 +112,15 @@ public class MainScreen extends JFrame {
 		vr5.addStage(vr5Stage2);
 		vr5.addStage(vr5Stage3);		
 		
+		//------------------------------------------Parvo----------------------
+		WithoutEnvelop vr6 = new WithoutEnvelop("Parvo", "/oop/globalict/project/image/parvo/parvo_Structure.png", "Acid nucleic (RNA or DNA): ribonucleic acid, stores genetic data in organization", "Capsid: protein coat, protect RNA", "Excrement, air", "none");
+		Stage vr6Stage1 = new Stage("/oop/globalict/project/image/parvo/parvo-stage1.png", "Atachment:\nParvovirus  attaches to target host cells");
+		Stage vr6Stage2 = new Stage("/oop/globalict/project/image/parvo/parvo-stage2.png", "Duplication:\nMany parvovirus are made out of the host cells");
+		Stage vr6Stage3 = new Stage("/oop/globalict/project/image/parvo/parvo-stage3.png", "Going to bloodstream:\nParvovirus goes into the bloodstream, and destroy the epithelium, and it can not be recovered");
+		
+		vr6.addStage(vr6Stage1);
+		vr6.addStage(vr6Stage2);
+		vr6.addStage(vr6Stage3);
 		try {
 			nonEnvelopStorage.addVirus(vr4);
 		} catch (LimitExceededException e) {
@@ -138,6 +147,12 @@ public class MainScreen extends JFrame {
 		}
 		try {
 			envelopStorage.addVirus(vr3);
+		} catch (LimitExceededException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			nonEnvelopStorage.addVirus(vr6);
 		} catch (LimitExceededException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

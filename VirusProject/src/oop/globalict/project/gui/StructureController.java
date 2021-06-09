@@ -30,6 +30,9 @@ public class StructureController {
     @FXML
     private RadioButton envelop;
     
+    @FXML
+    private RadioButton otherComponents;
+    
     @FXML 
     private ToggleGroup selections;
 
@@ -64,6 +67,7 @@ public class StructureController {
 		nucleic.setDisable(false);
 		if (virus instanceof WithEnvelop)
 			envelop.setDisable(false);
+		if (virus.getOtherComponents() != "none") otherComponents.setDisable(false);
 		String path = new String(virus.getGeneralImage());
 		setImage(path);		
 		if(capsid.isSelected()) {
@@ -76,6 +80,10 @@ public class StructureController {
 		else if (envelop.isSelected()) {
 			WithEnvelop tmp = (WithEnvelop)virus;
 			setText(tmp.getEnvelopDesc());
+		}
+		else if (otherComponents.isSelected()) {
+			WithEnvelop tmp = (WithEnvelop)virus;
+			setText(tmp.getOtherComponents());
 		}
 	}
 }

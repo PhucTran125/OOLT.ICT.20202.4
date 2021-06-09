@@ -34,13 +34,21 @@
                      <padding>
                         <Insets left="30.0" />
                      </padding></RadioButton>
-                  <RadioButton fx:id="envelop" disable="true" layoutY="250.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="40.0" text="Envelop" toggleGroup="$selections">
+                  <RadioButton fx:id="envelop" disable="true" layoutY="252.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="40.0" text="Envelop" toggleGroup="$selections">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <padding>
                         <Insets left="30.0" />
                      </padding></RadioButton>
+                  <RadioButton fx:id="otherComponents" disable="true" layoutY="312.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="40.0" text="Other components" textFill="#ff1a1a" toggleGroup="$selections">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
                   <Button fx:id="start" layoutX="50.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnOnAction" text="START">
                      <font>
                         <Font size="18.0" />

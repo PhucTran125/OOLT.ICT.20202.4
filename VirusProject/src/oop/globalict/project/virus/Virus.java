@@ -1,15 +1,16 @@
-package oop.globalict.project.virus;
+	package oop.globalict.project.virus;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public abstract class Virus {
+public abstract class Virus implements Controller{
 	protected int id;
 	protected String name;
 	protected String generalImg;
 	protected String acidDesc;
 	protected String capsidDesc;
 	protected String infectionMethod;
+	protected String otherComponents;
 	public ObservableList<Stage> stages = FXCollections.observableArrayList();
 	
 	public int getId() {
@@ -40,24 +41,22 @@ public abstract class Virus {
 		return stages.get(i);
 	}
 	
-	// Constructor
-	public Virus(String name, String generalImg, String acidDesc, String capsidDesc, String infectionMethod) {
-		super();
-		this.name = name;
-		this.infectionMethod = infectionMethod;
-		this.generalImg = generalImg;
-		this.acidDesc = acidDesc;
-		this.capsidDesc = capsidDesc;
+	public String getOtherComponents() {
+		return otherComponents;
 	}
+	
+	// Constructor
+		public Virus(String name, String generalImg, String acidDesc, String capsidDesc, String infectionMethod, String otherComponents) {
+			super();
+			this.name = name;
+			this.infectionMethod = infectionMethod;
+			this.generalImg = generalImg;
+			this.acidDesc = acidDesc;
+			this.capsidDesc = capsidDesc;
+			this.otherComponents = otherComponents;
+		}
 	
 	public void addStage(Stage stage) {
 		stages.add(stage);
 	}
-	public abstract String stage1Label();
-	public abstract String stage2Label();
-	public abstract String stage3Label();
-	public abstract String stage4Label();
-	public abstract String generalMechanism();
-	public abstract String generalStructure();
-	
 }

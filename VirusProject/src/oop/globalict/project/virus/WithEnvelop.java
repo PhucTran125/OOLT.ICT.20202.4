@@ -4,8 +4,8 @@ public class WithEnvelop extends Virus{
 	public String envelopDesc;
 	private static int nbEnVirus = 0;
 	
-	public WithEnvelop(String name, String generalImg, String acidDesc, String capsidDesc, String infectionMedthod, String envelopDesc) {
-		super(name, generalImg, acidDesc, capsidDesc, infectionMedthod);
+	public WithEnvelop(String name, String generalImg, String acidDesc, String capsidDesc, String infectionMedthod, String envelopDesc, String otherComponents) {
+		super(name, generalImg, acidDesc, capsidDesc, infectionMedthod, otherComponents);
 		this.envelopDesc = envelopDesc;
 		this.id = nbEnVirus++;
 	}
@@ -45,18 +45,18 @@ public class WithEnvelop extends Virus{
 	@Override
 	public String generalMechanism() {
 		return "General Mechanism:\n"
-				+ "aproaching the sell\n "
-				+ "entering the sell\n"
-				+ "duplication\n"
-				+ "releasing new virus";
+				+ "+ Aproaching the sell\n"
+				+ "+ Entering the sell\n"
+				+ "+ Duplication\n"
+				+ "+ Releasing new virus";
 	}
 	
 	@Override
 	public String generalStructure() {
 		return "General Structure:\n"
-				+ "capsid\n "
-				+ "acid nucleic\n"
-				+ "envelop";
+				+ "+ Capsid\n"
+				+ "+ Acid nucleic\n"
+				+ "+ Envelop";
 	}
 	
 }

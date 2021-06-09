@@ -3,8 +3,8 @@ package oop.globalict.project.virus;
 public class WithoutEnvelop extends Virus {
 	private static int nbNotEnVirus = 0;
 	
-	public WithoutEnvelop(String name, String generalImg, String acidDesc, String capsidDesc, String infectionMethod) {
-		super(name, generalImg, acidDesc, capsidDesc, infectionMethod);
+	public WithoutEnvelop(String name, String generalImg, String acidDesc, String capsidDesc, String infectionMethod, String otherComponents) {
+		super(name, generalImg, acidDesc, capsidDesc, infectionMethod, otherComponents);
 		this.id = nbNotEnVirus++;
 	}
 
@@ -39,16 +39,16 @@ public class WithoutEnvelop extends Virus {
 	@Override
 	public String generalMechanism() {
 		return "General Mechanism:\n"
-				+ "attachment\n"
-				+ "injection\n"
-				+ "duplication";
+				+ "+ Attachment\n"
+				+ "+ Injection\n"
+				+ "+ Duplication\n";
 	}
 	
 	@Override
 	public String generalStructure() {
 		return "General Structure:\n"
-				+ "capsid\n "
-				+ "acid nucleic\n";
+				+ "+ Capsid\n"
+				+ "+ Acid nucleic\n";
 	}
 	
 }

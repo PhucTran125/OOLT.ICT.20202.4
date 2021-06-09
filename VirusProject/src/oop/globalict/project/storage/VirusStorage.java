@@ -5,7 +5,6 @@ import javax.naming.LimitExceededException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import oop.globalict.project.virus.Virus;
-import oop.globalict.project.virus.WithEnvelop;
 
 public class VirusStorage {
 	public static final int MAX_VIRUS_STORAGE = 20;
