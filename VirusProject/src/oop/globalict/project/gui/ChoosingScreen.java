@@ -1,7 +1,9 @@
 package oop.globalict.project.gui;
 
 import java.io.IOException;
+
 import javax.swing.JFrame;
+
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
