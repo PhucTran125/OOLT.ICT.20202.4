@@ -3,7 +3,7 @@ package oop.globalict.project.virus;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Virus {
+public abstract class Virus {
 	protected int id;
 	protected String name;
 	protected String generalImg;
@@ -53,4 +53,11 @@ public class Virus {
 	public void addStage(Stage stage) {
 		stages.add(stage);
 	}
+	public abstract String stage1Label();
+	public abstract String stage2Label();
+	public abstract String stage3Label();
+	public abstract String stage4Label();
+	public abstract String generalMechanism();
+	public abstract String generalStructure();
+	
 }

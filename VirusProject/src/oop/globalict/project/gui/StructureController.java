@@ -46,17 +46,20 @@ public class StructureController {
 		structureDesc.setText(description);
 		
 	}
+
+	public void generalStructure() {
+		try {
+			setText(virus.generalStructure());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	@FXML
 	public void btnOnAction() throws IOException{
 		
-		if(virus instanceof WithEnvelop)
-			setText("General Structure:\n"
-					+ "+ Capsid\n"
-					+ "+ Acid nucleic\n"
-					+ "+ Envelop");
-		else setText("General Structure:\n"
-					+ "+ Capsid\n"
-					+ "+ Acid nucleic");
+		generalStructure();
 		capsid.setDisable(false);
 		nucleic.setDisable(false);
 		if (virus instanceof WithEnvelop)

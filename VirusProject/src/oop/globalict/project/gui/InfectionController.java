@@ -47,13 +47,28 @@ public class InfectionController{
 		text.setText(description);
 		
 	}
+	
+	public void stageLabel() {
+		stage1.setText(virus.stage1Label());
+		stage2.setText(virus.stage2Label());
+		stage3.setText(virus.stage3Label());
+		stage4.setText(virus.stage4Label());
+		
+	}
+
+	public void generalMechanism() {
+		try {
+			setText(virus.generalMechanism());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	@FXML
 	public void btnOnAction() throws IOException{
-		if(virus instanceof WithEnvelop)
-			setText("General Mechanism:\n"
-					+ "Aproaching the sell -> Entering the sell -> Duplication\n");
-		else setText("General Mechanism:\n"
-				+ "Attachment -> Injection -> Duplication\n");
+		stageLabel();
+		generalMechanism(); 
 		stage1.setDisable(false);
 		stage2.setDisable(false);
 		stage3.setDisable(false);
