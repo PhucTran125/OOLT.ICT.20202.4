@@ -1,9 +1,9 @@
-package oop.globalict.project.virus;
+	package oop.globalict.project.virus;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public abstract class Virus {
+public abstract class Virus implements Controller{
 	protected int id;
 	protected String name;
 	protected String generalImg;
