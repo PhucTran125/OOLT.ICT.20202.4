@@ -2,6 +2,7 @@ package oop.globalict.project.gui;
 
 import java.io.IOException;
 
+import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -12,8 +13,9 @@ import oop.globalict.project.virus.Virus;
 
 public class DemonstrationScreenController {
 	private Virus virus = DemonstrationScreen.virus;
-	private VirusStorage selected;
-	private VirusStorage theOther;
+	private VirusStorage storage;
+	private String typeOfVirus;
+	private JFXPanel fxPanel;
 	private Scene scene;
 	private Stage stage;
 	//-----------FXML-------------//
@@ -32,19 +34,20 @@ public class DemonstrationScreenController {
 	
 	@FXML
 	public void handleBackButtonAction(ActionEvent event) throws IOException{
-		new ChoosingScreen(selected, theOther);
+		new ChoosingScreen(storage, typeOfVirus, fxPanel);
 	}
 	
 	@FXML
 	public void handleHomeButtonAction(ActionEvent event) {
-	    MainScreen.main(null);
+	    new MainScreen(storage, fxPanel);
 	}
 	//------------FXML---------------------//
 	
-	public DemonstrationScreenController(Virus v,VirusStorage selected2, VirusStorage theOther2) {
+	public DemonstrationScreenController(Virus v,VirusStorage storage, String type, JFXPanel panel) {
 		super();
 		this.virus = v;
-		this.selected = selected2;
-		this.theOther = theOther2;
+		this.storage = storage;
+		this.typeOfVirus = type;
+		this.fxPanel = panel;
 	}
 }

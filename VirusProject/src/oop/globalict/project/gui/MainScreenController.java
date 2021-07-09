@@ -2,13 +2,14 @@ package oop.globalict.project.gui;
 
 import javax.swing.JOptionPane;
 
+import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import oop.globalict.project.storage.VirusStorage;
 
 public class MainScreenController {
-	private VirusStorage storage1;
-	private VirusStorage storage2;
+	private VirusStorage storage;
+	private JFXPanel fxPanel;
 	
 	// function for main screen
 
@@ -25,20 +26,22 @@ public class MainScreenController {
 
     @FXML
     void btnWithEnvelopPressed(ActionEvent event) {
-    	new ChoosingScreen(storage1, storage2);
+    	String typeOfVirus = "WithEnvelop";
+    	new ChoosingScreen(storage, typeOfVirus, fxPanel);
     }
 
     @FXML
     void btnWithoutEnvelopPressed(ActionEvent event) {
-    	new ChoosingScreen(storage2, storage1);
+    	String typeOfVirus = "WithoutEnvelop";
+    	new ChoosingScreen(storage, typeOfVirus, fxPanel);
     	
     }    
     // function for main screen
     
-    public MainScreenController(VirusStorage storage1, VirusStorage storage2) {
+    public MainScreenController(VirusStorage storage, JFXPanel fxPanel) {
 		// TODO Auto-generated constructor stub
     	super();
-    	this.storage1 = storage1;
-    	this.storage2 = storage2;
-	}
+    	this.storage = storage;
+    	this.fxPanel = fxPanel;
+    }
 }

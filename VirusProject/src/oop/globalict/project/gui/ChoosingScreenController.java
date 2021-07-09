@@ -1,9 +1,12 @@
 package oop.globalict.project.gui;
 
+import java.io.IOException;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,8 +20,10 @@ import oop.globalict.project.storage.VirusStorage;
 import oop.globalict.project.virus.Virus;
 
 public class ChoosingScreenController {
-	private VirusStorage mainStorage;
-	private VirusStorage anotherStorage;
+	private VirusStorage usedStorage;
+	private VirusStorage totalStorage;
+	private String typeOfVirus;
+	private JFXPanel fxPanel;
 	
 	@FXML
     void btnHelpPressed(ActionEvent event) {
@@ -27,7 +32,7 @@ public class ChoosingScreenController {
 
     @FXML
     void btnHomePressed(ActionEvent event) {
-    	MainScreen.main(null);
+    	new MainScreen(totalStorage, fxPanel);
     }
 
 	
@@ -61,14 +66,16 @@ public class ChoosingScreenController {
     @FXML
     void btnInvestigatePressed(ActionEvent event) {
     	Virus virus = tblVirus.getSelectionModel().getSelectedItem();
-    	new DemonstrationScreen(virus, mainStorage, anotherStorage);
+    	new DemonstrationScreen(virus, totalStorage, typeOfVirus, fxPanel);
     }
     
-    public ChoosingScreenController(VirusStorage storage1, VirusStorage storage2) {
+    public ChoosingScreenController(VirusStorage finalStorage, VirusStorage totalStorage, String type, JFXPanel fxPanel) {
 		// TODO Auto-generated constructor stub
     	super();
-    	this.mainStorage = storage1;
-    	this.anotherStorage = storage2;
+    	this.usedStorage = finalStorage;
+    	this.totalStorage = totalStorage;
+    	this.typeOfVirus = type;
+    	this.fxPanel = fxPanel;
     }
     
     @FXML
@@ -76,7 +83,7 @@ public class ChoosingScreenController {
     	colVirusID.setCellValueFactory(new PropertyValueFactory<Virus, Integer>("id"));
     	colVirusName.setCellValueFactory(new PropertyValueFactory<Virus, String>("name"));
     	colVirusInfectionMethod.setCellValueFactory(new PropertyValueFactory<Virus, String>("infectionMethod"));
-    	tblVirus.setItems(this.mainStorage.getVirus());
+    	tblVirus.setItems(this.usedStorage.getVirus());
     	
     	
     	btnInvestigation.setVisible(false);
@@ -104,7 +111,7 @@ public class ChoosingScreenController {
     	ObservableList<Virus> list = FXCollections.observableArrayList();
 		
 		if (radioBtnFilterName.isSelected()){
-			for (Virus item : mainStorage.getVirus()) {
+			for (Virus item : usedStorage.getVirus()) {
 				if (item.getName().toLowerCase().contains(value.toLowerCase())) {
 					list.add(item);
 				}
@@ -112,7 +119,7 @@ public class ChoosingScreenController {
 			tblVirus.setItems(list);
 		}
 		else {
-			for (Virus item : mainStorage.getVirus()) {
+			for (Virus item : usedStorage.getVirus()) {
 				if (item.getInfectionMethod().toLowerCase().contains(value.toLowerCase())) {
 					list.add(item);
 				}

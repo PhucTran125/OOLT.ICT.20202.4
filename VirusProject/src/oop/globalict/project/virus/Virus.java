@@ -3,7 +3,7 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public abstract class Virus implements Controller{
+public abstract class Virus implements Controller, showStructure{
 	protected int id;
 	protected String name;
 	protected String generalImg;
@@ -29,20 +29,9 @@ public abstract class Virus implements Controller{
 		return generalImg;
 	}
 	
-	public String getAcidDesc() {
-		return acidDesc;
-	}
-
-	public String getCapsidDesc() {
-		return capsidDesc;
-	}
 	
 	public Stage getStage(int i) {
 		return stages.get(i);
-	}
-	
-	public String getOtherComponents() {
-		return otherComponents;
 	}
 	
 	// Constructor

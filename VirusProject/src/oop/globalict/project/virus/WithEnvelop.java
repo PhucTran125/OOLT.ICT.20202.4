@@ -1,6 +1,6 @@
 package oop.globalict.project.virus;
 
-public class WithEnvelop extends Virus{
+public class WithEnvelop extends Virus implements showStructure{
 	public String envelopDesc;
 	private static int nbEnVirus = 0;
 	
@@ -58,5 +58,23 @@ public class WithEnvelop extends Virus{
 				+ "+ Acid nucleic\n"
 				+ "+ Envelop";
 	}
-	
+
+	@Override
+	public String showStructure(String comName) {
+		// TODO Auto-generated method stub
+		String componentDesc = "";
+		if (comName.contains("Acid")) {
+			componentDesc = acidDesc;
+		}
+		else if (comName.contains("Capsid")) {
+			componentDesc = capsidDesc;
+		}
+		else if (comName.contains("Envelop")) {
+			componentDesc = envelopDesc;
+		}
+		else if (comName.contains("Other")) {
+			componentDesc = otherComponents;
+		}
+		return componentDesc;
+	}	
 }

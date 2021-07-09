@@ -23,4 +23,8 @@ public class VirusStorage {
 	public ObservableList<Virus> getVirus() {
 		return storage;
 	}
+	
+	public Virus getVirus(int i) {
+		return storage.get(i);
+	}
 }

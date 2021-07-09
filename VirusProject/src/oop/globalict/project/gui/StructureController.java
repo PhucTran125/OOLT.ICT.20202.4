@@ -11,6 +11,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import oop.globalict.project.virus.Virus;
 import oop.globalict.project.virus.WithEnvelop;
+import oop.globalict.project.virus.WithoutEnvelop;
+import oop.globalict.project.virus.showStructure;
 
 public class StructureController {
 	private Virus virus = DemonstrationScreen.virus;
@@ -45,9 +47,7 @@ public class StructureController {
 	
 	}
 	public void setText(String description) throws IOException{
-		
 		structureDesc.setText(description);
-		
 	}
 
 	public void generalStructure() {
@@ -65,25 +65,47 @@ public class StructureController {
 		generalStructure();
 		capsid.setDisable(false);
 		nucleic.setDisable(false);
-		if (virus instanceof WithEnvelop)
+		if (virus instanceof WithEnvelop) {
 			envelop.setDisable(false);
-		if (virus.getOtherComponents() != "none") otherComponents.setDisable(false);
+			WithEnvelop enVirus = (WithEnvelop) virus;
+			showEnvelopVirusStruc(enVirus);
+		}
+		else {
+			WithoutEnvelop notEnVirus = (WithoutEnvelop) virus;
+			showNotEnvelopVirusStruc(notEnVirus);
+		}
+	}
+	
+	public void showEnvelopVirusStruc(WithEnvelop virus) throws IOException {
+		if (virus.showStructure(otherComponents.getText()) != "none") otherComponents.setDisable(false);
 		String path = new String(virus.getGeneralImage());
 		setImage(path);		
 		if(capsid.isSelected()) {
-				
-			setText(virus.getCapsidDesc());
+			setText(virus.showStructure(capsid.getText()));
 		}
 		else if(nucleic.isSelected()) {
-			setText(virus.getAcidDesc());
+			setText(virus.showStructure(nucleic.getText()));
 		}
 		else if (envelop.isSelected()) {
-			WithEnvelop tmp = (WithEnvelop)virus;
-			setText(tmp.getEnvelopDesc());
+			setText(virus.showStructure(envelop.getText()));
 		}
 		else if (otherComponents.isSelected()) {
-			WithEnvelop tmp = (WithEnvelop)virus;
-			setText(tmp.getOtherComponents());
+			setText(virus.showStructure(otherComponents.getText()));
+		}
+	}
+	public void showNotEnvelopVirusStruc(WithoutEnvelop virus) throws IOException {
+		if (virus.showStructure(otherComponents.getText()) != "none") otherComponents.setDisable(false);
+		String path = new String(virus.getGeneralImage());
+		setImage(path);		
+		if(capsid.isSelected()) {
+			System.out.println(capsid.getText());
+			setText(virus.showStructure(capsid.getText()));
+		}
+		else if(nucleic.isSelected()) {
+			setText(virus.showStructure(nucleic.getText()));
+		}
+		else if (otherComponents.isSelected()) {
+			setText(virus.showStructure(otherComponents.getText()));
 		}
 	}
 }
